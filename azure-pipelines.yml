@@ -8,7 +8,7 @@
      fortifyBuildId: 'webgoat'
      runFortifyRulepackUpdate: true
      fortifyScanType: 'LocalScan'
-trigger:
+ trigger:
 - master
 
 resources:
