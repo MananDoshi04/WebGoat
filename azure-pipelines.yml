@@ -11,6 +11,7 @@ resources:
 steps:
     - task: FortifySCA@7
       inputs:
+        licenseFile: 'C:\Users\Administrator\Downloads\Fortify.License'
         applicationType: 'other'
         fortifyBuildId: 'webgoat'
         runFortifyRulepackUpdate: false
@@ -23,5 +24,3 @@ steps:
         runFortifyScan: true
         fortifyApplicationName: 'WebGoat'
         fortifyApplicationVersion: '1'   
-
-    
