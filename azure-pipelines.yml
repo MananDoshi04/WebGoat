@@ -42,4 +42,10 @@ stages:
         applicationType: 'other'
         fortifyBuildId: 'webgoat'
         runFortifyRulepackUpdate: true
-        fortifyScanType: 'LocalScan'
+        fortifyScanType: 'LocalScan'   
+    - task: Docker@2
+      inputs:
+        repository: 'contrastdemojavawebgoat'
+        command: 'buildAndPush'
+        Dockerfile: '**/Dockerfile'
+    
