@@ -8,9 +8,7 @@ trigger:
 resources:
 - repo: self
 
-  # Agent VM image name
-  vmImageName: 'ubuntu-latest'
-
+ 
 stages:
 - stage: Build
   displayName: Build and push stage
