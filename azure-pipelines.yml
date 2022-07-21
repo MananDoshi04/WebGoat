@@ -1,13 +1,13 @@
 # Docker
-- task: FortifySCA@7
-  inputs:
-    applicationType: 'other'
-    fortifyBuildId: 'webgoat'
-    runFortifyRulepackUpdate: true
-    fortifyScanType: 'LocalScan'
 # Build and push an image to Azure Container Registry
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
+- task: FortifySCA@7
+  inputs:
+    applicationType: 'other'
+     fortifyBuildId: 'webgoat'
+     runFortifyRulepackUpdate: true
+     fortifyScanType: 'LocalScan'
 trigger:
 - master
 
