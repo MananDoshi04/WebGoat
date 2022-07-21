@@ -1,4 +1,11 @@
 services:
+- task: InstallFortifySCA@7
+  inputs:
+    InstallerPath: 'C:\Users\Administrator\Downloads\Fortify_SCA_and_Apps_21.2.3_Windows\Fortify_SCA_and_Apps_21.2.3_windows_x64'
+    VS2015: false
+    VS2019: true
+    LicenseFile: 'C:\Users\Administrator\Downloads\Fortify.License'
+    RunFortifyRulepackUpdate: false
   - docker
 language: java
 jdk:
