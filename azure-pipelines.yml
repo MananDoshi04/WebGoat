@@ -37,4 +37,9 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
-    
+    - task: FortifySCA@7
+      inputs:
+        applicationType: 'other'
+        fortifyBuildId: 'webgoat'
+        runFortifyRulepackUpdate: true
+        fortifyScanType: 'LocalScan'
