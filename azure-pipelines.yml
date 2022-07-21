@@ -15,8 +15,6 @@ stages:
   jobs:  
   - job: Build
     displayName: Build
-    pool:
-      vmImage: $(vmImageName)
     steps:
     - task: FortifySCA@7
       inputs:
@@ -24,9 +22,5 @@ stages:
         fortifyBuildId: 'webgoat'
         runFortifyRulepackUpdate: true
         fortifyScanType: 'LocalScan'   
-    - task: Docker@2
-      inputs:
-        repository: 'contrastdemojavawebgoat'
-        command: 'buildAndPush'
-        Dockerfile: '**/Dockerfile'
+
     
