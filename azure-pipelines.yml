@@ -20,7 +20,15 @@ stages:
       inputs:
         applicationType: 'other'
         fortifyBuildId: 'webgoat'
-        runFortifyRulepackUpdate: true
-        fortifyScanType: 'LocalScan'   
+        runFortifyRulepackUpdate: false
+        fortifyScanType: 'LocalScan'
+        runBuildTranslate: true
+        buildToolOptions: 'mvn com.fortify.sca.plugins.maven:sca-maven-plugin:translate'
+        runFortifyClean: true
+        scaVerbose: false
+        scaDebug: false
+        runFortifyScan: true
+        fortifyApplicationName: 'EightBall'
+        fortifyApplicationVersion: '1'   
 
     
